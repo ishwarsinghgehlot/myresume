@@ -1,0 +1,34 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= require ./blue/pace-theme-flash.css
+ *= require ./uniform/uniform.default.min.css
+ *= require ./bootstrap/bootstrap.min.css
+ *= require ./fontawesome/font-awesome.css
+ *= require ./line-icons/simple-line-icons.css
+ *= require ./offcanvasmenueffects/menu_cornerbox.css
+ *= require ./waves/waves.min.css
+ *= require ./switchery/switchery.min.css
+ *= require ./3d-bold-navigation/style.css
+ *= require ./css/modern.min.css
+ *= require ./css/custom.css
+ 
+ *= require ./css/bootstrap.css
+ *= require ./css/normalize.css
+ *= require ./css/animate.css
+ *= require ./css/transition-animations.css
+ *= require ./css/jquery.mCustomScrollbar.min.css
+ *= require ./css/owl.carousel.css
+ *= require ./css/magnific-popup.css
+ *= require ./css/main-red.css
+ *= require ./preview/lmpixels-demo-panel.css
+ *= require_self
+ */

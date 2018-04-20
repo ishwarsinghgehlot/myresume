@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @client_feedback.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @client_feedback.email %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @client_feedback.message %>
+</p>
+
+<%= link_to 'Edit', edit_client_feedback_path(@client_feedback) %> |
+<%= link_to 'Back', client_feedbacks_path %>

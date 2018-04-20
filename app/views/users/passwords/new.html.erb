@@ -1,0 +1,23 @@
+ <main class="page-content">
+            <div class="page-inner">
+                <div id="main-wrapper">
+                    <div class="row">
+                        <div class="col-md-3 center">
+                            <div class="login-box">
+                                <a href="index.html" class="logo-name text-lg text-center">Modern</a>
+                                <p class="text-center m-t-md">Enter your e-mail address below to reset your password</p>
+                                <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+                                  <%= devise_error_messages! %>
+                                    <div class="form-group">
+                                        <%= f.email_field :email, autofocus: true, autocomplete: "email" ,:class => "form-control" ,:placeholder => "Email" %>
+                                    </div>
+                                     <%= f.submit "Send me reset password instructions" ,:class => "btn btn-primary btn-block" %>
+                                    <%= link_to "Log in", new_session_path(resource_name) ,:class => "btn btn-default btn-block m-t-md" %>
+                                <% end %>
+                                <p class="text-center m-t-xs text-sm">2015 &copy; Modern by Steelcoders.</p>
+                            </div>
+                        </div>
+                    </div><!-- Row -->
+                </div><!-- Main Wrapper -->
+            </div><!-- Page Inner -->
+        </main><!-- Page Content -->

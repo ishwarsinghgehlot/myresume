@@ -1,0 +1,53 @@
+<div id="main-wrapper">
+ <div class="row">
+  <div class="col-md-8">
+    <div class="panel panel-dark">
+        <div class="panel-heading clearfix">
+            <h4 class="panel-title">Form Elements</h4>
+        </div>
+        <div class="panel-body">
+        <%= form_with(model: education, local: true ,:class => "form-horizontal") do |form| %>
+           <% if education.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(education.errors.count, "error") %> prohibited this education from being saved:</h2>
+                  <ul>
+                  <% education.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-10">
+                         <%= form.text_field :year, id: :education_year ,:class => "form-control input-rounded",:placeholder => "Year"%>
+                    </div>
+                </div> 
+
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-10">
+                         <%= form.text_field :course, id: :education_course,:class => "form-control input-rounded",:placeholder => "Course"%>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-10">
+                         <%= form.text_field :college, id: :education_college ,:class => "form-control input-rounded",:placeholder => "college"%>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-10">
+                         <%= form.text_area :description, id: :education_description ,:class => "form-control input-rounded",:placeholder => "Description"%>
+                    </div>
+                </div>
+                <div class="form-group"> 
+                  <div class="actions col-sm-offset-1 col-sm-10">
+                    <%= form.submit %>
+                  </div>
+                </div>        
+            <% end %>
+        </div>
+    </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,27 @@
+<%= form_with(model: codeing_skill, local: true) do |form| %>
+  <% if codeing_skill.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(codeing_skill.errors.count, "error") %> prohibited this codeing_skill from being saved:</h2>
+
+      <ul>
+      <% codeing_skill.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :language %>
+    <%= form.text_field :language, id: :codeing_skill_language %>
+  </div>
+
+  <div class="field">
+    <%= form.label :progress %>
+    <%= form.number_field :progress, id: :codeing_skill_progress %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

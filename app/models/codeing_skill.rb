@@ -1,0 +1,2 @@
+class CodeingSkill < ApplicationRecord
+end

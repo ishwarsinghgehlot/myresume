@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Client Feedbacks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @client_feedbacks.each do |client_feedback| %>
+      <tr>
+        <td><%= client_feedback.name %></td>
+        <td><%= client_feedback.email %></td>
+        <td><%= client_feedback.message %></td>
+        <td><%= link_to 'Show', client_feedback %></td>
+        <td><%= link_to 'Edit', edit_client_feedback_path(client_feedback) %></td>
+        <td><%= link_to 'Destroy', client_feedback, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Client Feedback', new_client_feedback_path %>

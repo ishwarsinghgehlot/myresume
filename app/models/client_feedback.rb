@@ -1,0 +1,2 @@
+class ClientFeedback < ApplicationRecord
+end

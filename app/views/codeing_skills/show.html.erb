@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @codeing_skill.language %>
+</p>
+
+<p>
+  <strong>Progress:</strong>
+  <%= @codeing_skill.progress %>
+</p>
+
+<%= link_to 'Edit', edit_codeing_skill_path(@codeing_skill) %> |
+<%= link_to 'Back', codeing_skills_path %>
